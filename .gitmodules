@@ -1,0 +1,3 @@
+[submodule "GameEngine/veendor/spdlog"]
+	path = GameEngine/veendor/spdlog
+	url = https://github.com/gabime/spdlog
