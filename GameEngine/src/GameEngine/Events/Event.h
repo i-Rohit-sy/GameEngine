@@ -6,7 +6,7 @@
 namespace GameEngine {
 	//Events in GameEngine are Currently blocking, meaning when an event occur it
 	//immediately gets dispatched and must be dealt with right then and there
-	//_______________for the future________
+	//_______________________for the future_______________________________
 	//A better strategy might be to buffer events in an event 
 	//bus and process them during the "Event" part of the update stage
 
@@ -15,7 +15,7 @@ namespace GameEngine {
 		None = 0,
 		WindowClose, WindowResize, Windowfocus, WindowLostfocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
-		KeyPressed, KeyReleased,
+		KeyPressed, KeyReleased, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
 
@@ -39,12 +39,13 @@ namespace GameEngine {
 	{
 		friend class EventDispatcher;
 	public:
+		bool Handled = false;
 		virtual EventType GetEventType()			const = 0;
 		virtual const char*	GetName()				const = 0;
 		virtual int	GetCategoryFlags()				const = 0;
 		virtual std::string	ToString()				const { return GetName(); }
 
-		inline bool IsInCategory(EventCategory category)
+		inline bool IsInCategory(EventCategory category) const
 		{
 			return GetCategoryFlags() & category;
 		}
@@ -69,7 +70,7 @@ namespace GameEngine {
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				m_Event.m_Handled = func(*(T*)& m_Event);
 				return true;
 			}
 			return false;

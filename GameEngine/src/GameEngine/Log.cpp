@@ -1,3 +1,5 @@
+#pragma once
+
 //log main program file include log.h
 //in future maybe create your custom one
 

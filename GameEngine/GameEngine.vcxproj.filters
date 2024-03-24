@@ -7,8 +7,17 @@
     <Filter Include="GameEngine\Events">
       <UniqueIdentifier>{193A4684-8550-441A-CEC7-CF3B3A1D15A2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameEngine\ImGui">
+      <UniqueIdentifier>{BF9035C6-AB89-5418-D4BB-399DC0133424}</UniqueIdentifier>
+    </Filter>
     <Filter Include="GameEngine\Platform">
       <UniqueIdentifier>{C92BDBCA-358D-B8D8-BEFA-FE8A2A5BEF97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Platform\OpenGL">
+      <UniqueIdentifier>{DD984917-C9A8-F5E7-3262-5A061E91E480}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Platform\Windows">
+      <UniqueIdentifier>{038F9858-6F9C-C63E-F882-C229648F92F5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,11 +40,23 @@
     <ClInclude Include="src\GameEngine\Events\MouseEvent.h">
       <Filter>GameEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\GameEngine\ImGui\ImGuiLayer.h">
+      <Filter>GameEngine\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Layer.h">
+      <Filter>GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\LayerStack.h">
+      <Filter>GameEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\GameEngine\Log.h">
       <Filter>GameEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameEngine\Platform\WindowsWindow.h">
-      <Filter>GameEngine\Platform</Filter>
+    <ClInclude Include="src\GameEngine\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>GameEngine\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Platform\Windows\WindowsWindow.h">
+      <Filter>GameEngine\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Window.h">
       <Filter>GameEngine</Filter>
@@ -49,11 +70,23 @@
     <ClCompile Include="src\GameEngine\Application.cpp">
       <Filter>GameEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameEngine\ImGui\ImGuiLayer.cpp">
+      <Filter>GameEngine\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Layer.cpp">
+      <Filter>GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\LayerStack.cpp">
+      <Filter>GameEngine</Filter>
+    </ClCompile>
     <ClCompile Include="src\GameEngine\Log.cpp">
       <Filter>GameEngine</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameEngine\Platform\WindowsWindow.cpp">
-      <Filter>GameEngine\Platform</Filter>
+    <ClCompile Include="src\GameEngine\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>GameEngine\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Platform\Windows\WindowsWindow.cpp">
+      <Filter>GameEngine\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hzpch.cpp" />
   </ItemGroup>
