@@ -3,8 +3,14 @@
 #include "GameEngine/Application.h"
 #include "GameEngine/Layer.h"
 #include"GameEngine/Log.h"
+
+//Ipnuts 
+#include "GameEngine/Input.h"
+#include "GameEngine/KeyCodes.h"
+#include "GameEngine/MouseButtonCodes.h"
+
 #include "GameEngine/imGui/ImGuiLayer.h"
 //-----------Entry Point------------------------------------------------
-#include"GameEngine/EnteryPoint.h"
+#include"GameEngine/EntryPoint.h"
 //----------------------------------------------------------------------
 

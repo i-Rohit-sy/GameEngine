@@ -1,11 +1,13 @@
 workspace "GameEngine"
-    architecture "x64"
+        architecture "x64"
+        startproject "SandBox"
+        
+        configurations {
+            "Debug",
+            "Release",
+            "Dist"
+        }
 
-    configurations {
-        "Debug",
-        "Release",
-        "Dist"
-    }
 
     outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 --Include directory related to root folder
@@ -13,6 +15,8 @@ workspace "GameEngine"
     IncludeDir["GLFW"] = "GameEngine/vendor/GLFW/include"
     IncludeDir["Glad"]="GameEngine/vendor/Glad/include"
     IncludeDir["ImGui"]="GameEngine/vendor/imgui"
+    IncludeDir["glm"]="GameEngine/vendor/glm"
+
 
 include "GameEngine/vendor/GLFW"
 include "GameEngine/vendor/Glad"
@@ -20,8 +24,10 @@ include "GameEngine/vendor/imgui"
 
 project "GameEngine"
     location "GameEngine"
-    kind "SharedLib"
+    kind "StaticLib"
     language "C++"
+    cppdialect "C++17"
+    staticruntime "on"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -31,7 +37,10 @@ project "GameEngine"
 
     files {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
+        "%{prj.name}/vendor/glm/glm/**.hpp",
+        "%{prj.name}/vendor/glm/glm/**.inl"
+
     }
 
     includedirs {
@@ -39,7 +48,9 @@ project "GameEngine"
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.glm}"
+
     }
 
     links {
@@ -50,40 +61,37 @@ project "GameEngine"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines {
             "GE_PLATFORM_WINDOWS",
             "GE_BUILD_DLL",
-            "GLFW_INCLUDE_NONE"
+            "GLFW_INCLUDE_NONE",
+
         }
 
-        postbuildcommands
-	{
-    ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/SandBox")
-	}
 
     filter "configurations:Debug"
         defines "GE_DEBUG"
-        buildoptions "/MDd"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "GE_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "GE_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
 project "SandBox"
     location "SandBox"
     kind "ConsoleApp"
     language "C++"
+    cppdialect "C++17"
+    staticruntime "on"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -95,16 +103,18 @@ project "SandBox"
 
     includedirs {
         "GameEngine/vendor/spdlog/include",
-        "GameEngine/src"
+        "GameEngine/src",
+        "GameEngine/vendor",
+        "%{IncludeDir.glm}"
+
     }
 
     links {
+
         "GameEngine"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines {
@@ -113,15 +123,15 @@ project "SandBox"
         
     filter "configurations:Debug"
         defines "GE_DEBUG"
-        buildoptions "/MDd"
-        symbols "On"
+        runtime "Debug"
+        symbols "on"
 
     filter "configurations:Release"
         defines "GE_RELEASE"
-        buildoptions "/MD"
-        optimize "On"
+        runtime "Release"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "GE_DIST"
-        buildoptions "/MD"
-        optimize "On"
+        runtime "Release"
+        optimize "on"
