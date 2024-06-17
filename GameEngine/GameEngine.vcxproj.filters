@@ -90,7 +90,13 @@
     <ClInclude Include="src\GameEngine\MouseButtonCodes.h">
       <Filter>src\GameEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLBuffer.h">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLVertexArray.h">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Platform\Windows\WindowsInput.h">
@@ -99,7 +105,19 @@
     <ClInclude Include="src\GameEngine\Platform\Windows\WindowsWindow.h">
       <Filter>src\GameEngine\Platform\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\Buffer.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\GraphicsContext.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\Renderer.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\Shader.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\VertexArray.h">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Window.h">
@@ -1379,7 +1397,13 @@
     <ClCompile Include="src\GameEngine\Log.cpp">
       <Filter>src\GameEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\GameEngine\Platform\Windows\WindowsInput.cpp">
@@ -1387,6 +1411,18 @@
     </ClCompile>
     <ClCompile Include="src\GameEngine\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\GameEngine\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\Buffer.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\Renderer.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\Shader.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\VertexArray.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\hzpch.cpp">
       <Filter>src</Filter>

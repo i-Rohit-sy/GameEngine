@@ -26,7 +26,7 @@ namespace GameEngine {
         using EventCallbackFn = std::function<void(Event&)>;
 
         // Destructor
-        virtual ~Window() {}
+        virtual ~Window() = default;
 
         // Pure virtual function for updating the window
         virtual void OnUpdate() = 0;

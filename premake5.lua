@@ -18,9 +18,13 @@ workspace "GameEngine"
     IncludeDir["glm"]="GameEngine/vendor/glm"
 
 
-include "GameEngine/vendor/GLFW"
-include "GameEngine/vendor/Glad"
-include "GameEngine/vendor/imgui"
+group "Dependencies"
+    include "GameEngine/vendor/GLFW"
+    include "GameEngine/vendor/Glad"
+    include "GameEngine/vendor/imgui"
+
+group ""
+
 
 project "GameEngine"
     location "GameEngine"
