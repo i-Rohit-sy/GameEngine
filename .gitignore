@@ -1,9 +1,11 @@
 #directories
 .vs/
 bin/
+/bin/
 bin-int/
 
 
 
 #files
 *.user
+Temp.txt

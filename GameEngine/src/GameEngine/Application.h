@@ -7,6 +7,10 @@
 #include "GameEngine/Events/Event.h"
 #include "GameEngine/Events/ApplicationEvent.h"
 
+#include "GameEngine/Renderer/Shader.h"
+#include "GameEngine/Renderer/Buffer.h"
+#include "GameEngine/Renderer/VertexArray.h"
+
 #include "GameEngine/ImGui/ImGuiLayer.h"
 
 namespace GameEngine {
@@ -14,7 +18,7 @@ namespace GameEngine {
 	{
 	public:
 		Application();
-		virtual ~Application();
+		virtual ~Application() = default;
 		void Run();
 
 		void OnEvent(Event& e);
@@ -31,6 +35,14 @@ namespace GameEngine {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+
+		std::shared_ptr<Shader> m_Shader;
+		std::shared_ptr<VertexArray> m_VertexArray;
+
+		std::shared_ptr<Shader> m_BlueShader;
+		std::shared_ptr<VertexArray> m_SquareVA;
+
+
 	private:
 		static Application*s_Instance;
 

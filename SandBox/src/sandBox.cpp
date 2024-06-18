@@ -16,7 +16,8 @@ public:
 
 	void OnUpdate() override
 	{
-		GE_INFO("ExampleLayer::Update");
+		//GE_INFO("ExampleLayer::Update");
+
 		if (GameEngine::Input::IsKeyPressed(GE_KEY_TAB))  {
 			GE_TRACE("Tab key pressed (POLL)!");
 		}
@@ -24,7 +25,7 @@ public:
 	virtual void OnImGuiRender() override
 	{
 		ImGui::Begin("Test");
-		ImGui::Text("Hello World");
+		ImGui::Text("Checking ");
 		ImGui::End();
 	}
 
@@ -36,7 +37,7 @@ public:
 			GameEngine::KeyPressedEvent& e = (GameEngine::KeyPressedEvent&)event;
 			if (e.GetKeyCode() == GE_KEY_TAB)
 				GE_TRACE("Tab key is pressed (event)!");
-			GE_TRACE("{0}", (char)e.GetKeyCode());
+				GE_TRACE("{0}", (char)e.GetKeyCode());
 		}
 
 	}
