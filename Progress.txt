@@ -6,6 +6,13 @@ premake
 batchfiles
 Event System
 
+________-sept 17-__________
+vertex buffer
+vertex array
+renderer
+renderer flow and submission
+
+
 
 
 ____SandBox____(game)

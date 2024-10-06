@@ -13,6 +13,9 @@
 
 #include "GameEngine/ImGui/ImGuiLayer.h"
 
+#include "GameEngine/Renderer/OrthoGraphicCamera.h"
+
+
 namespace GameEngine {
 	class GAMEENGINE_API Application
 	{
@@ -42,6 +45,7 @@ namespace GameEngine {
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
 
+		OrthogpaphicCamera m_Camera;
 
 	private:
 		static Application*s_Instance;

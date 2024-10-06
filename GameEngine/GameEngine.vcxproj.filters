@@ -1377,6 +1377,10 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\RendererAPI.h" />
+    <ClInclude Include="src\GameEngine\Renderer\RenderCommand.h" />
+    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.h" />
+    <ClInclude Include="src\GameEngine\Renderer\OrthoGraphicCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameEngine\Application.cpp">
@@ -1427,5 +1431,9 @@
     <ClCompile Include="src\hzpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\RendrerAPI.cpp" />
+    <ClCompile Include="src\GameEngine\Renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.cpp" />
+    <ClCompile Include="src\GameEngine\Renderer\OrthoGraphicCamera.cpp" />
   </ItemGroup>
 </Project>
