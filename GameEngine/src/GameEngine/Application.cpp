@@ -3,7 +3,7 @@
 #include<hzpch.h>
 #include "Application.h"
 #include "GameEngine/Log.h"
-#include<glad/glad.h>
+#include "GameEngine/Renderer/Renderer.h"
 
 #include"Input.h"
 
@@ -15,6 +15,7 @@ namespace GameEngine {
 
 
 	Application::Application()
+		:m_Camera(-1.0f,1.0f,-1.0f,1.0f)
 	{
 		GE_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
@@ -72,12 +73,14 @@ namespace GameEngine {
 		m_SquareVA->SetIndexBuffer(squareIB);
 
 
-				std::string vertexSrc = R"(
+			std::string vertexSrc = R"(
 			#version 330 core
 			
 			layout(location = 0) in vec3 a_Position;
 			layout(location = 1) in vec4 a_Color;
-
+				
+			uniform mat4 u_ViewProjection;
+			
 			out vec3 v_Position;
 			out vec4 v_Color;
 
@@ -85,7 +88,7 @@ namespace GameEngine {
 			{
 				v_Position = a_Position;
 				v_Color = a_Color;
-				gl_Position = vec4(a_Position, 1.0);	
+				gl_Position = u_ViewProjection * vec4(a_Position, 1.0);	
 			}
 		)";
 
@@ -111,11 +114,15 @@ namespace GameEngine {
 			#version 330 core
 			
 			layout(location = 0) in vec3 a_Position;
+
+			uniform mat4 u_ViewProjection;
+			
+
 			out vec3 v_Position;
 			void main()
 			{
 				v_Position = a_Position;
-				gl_Position = vec4(a_Position, 1.0);	
+				gl_Position = u_ViewProjection * vec4(a_Position, 1.0);	
 			}
 		)";
 
@@ -167,17 +174,21 @@ namespace GameEngine {
 	{
 		while (m_Running)
 		{
-			glClearColor(0.1f, 0.1f, 0.1f, 1);
-			glClear(GL_COLOR_BUFFER_BIT);
-
-			m_BlueShader->Bind();
-			m_SquareVA->Bind();
-			glDrawElements(GL_TRIANGLES, m_SquareVA->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
+			//glClearColor(0.1f, 0.1f, 0.1f, 1);
+			//glClear(GL_COLOR_BUFFER_BIT);
 
 
-			m_Shader->Bind();
-			m_VertexArray->Bind();
-			glDrawElements(GL_TRIANGLES, m_VertexArray->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
+			RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+			RenderCommand::Clear();
+
+			m_Camera.setPosition({ 0.5f,0.5f,0.0f });
+			//m_Camera.setRotation(30.0f);
+
+			//start the seen containing all the information
+			Renderer::BeginScene(m_Camera);
+			Renderer::Submit(m_BlueShader,m_SquareVA);
+			Renderer::Submit(m_Shader,m_VertexArray);
+			Renderer::EndScene();
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
