@@ -6,18 +6,12 @@
 #include "GameEngine/LayerStack.h"
 #include "GameEngine/Events/Event.h"
 #include "GameEngine/Events/ApplicationEvent.h"
-
-#include "GameEngine/Renderer/Shader.h"
-#include "GameEngine/Renderer/Buffer.h"
-#include "GameEngine/Renderer/VertexArray.h"
-
+#include "GameEngine/Core/Timestep.h"
 #include "GameEngine/ImGui/ImGuiLayer.h"
-
-#include "GameEngine/Renderer/OrthoGraphicCamera.h"
 
 
 namespace GameEngine {
-	class GAMEENGINE_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -38,15 +32,7 @@ namespace GameEngine {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthogpaphicCamera m_Camera;
-
+		float m_LastFrameTime = 0.0f;
 	private:
 		static Application*s_Instance;
 
