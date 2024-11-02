@@ -96,6 +96,9 @@
     <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLContext.h">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.h">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLVertexArray.h">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClInclude>
@@ -111,7 +114,16 @@
     <ClInclude Include="src\GameEngine\Renderer\GraphicsContext.h">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\OrthoGraphicCamera.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\RenderCommand.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\Renderer.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\RendererAPI.h">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\Shader.h">
@@ -1377,10 +1389,7 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameEngine\Renderer\RendererAPI.h" />
-    <ClInclude Include="src\GameEngine\Renderer\RenderCommand.h" />
-    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.h" />
-    <ClInclude Include="src\GameEngine\Renderer\OrthoGraphicCamera.h" />
+    <ClInclude Include="src\GameEngine\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameEngine\Application.cpp">
@@ -1407,6 +1416,9 @@
     <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLContext.cpp">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1419,7 +1431,16 @@
     <ClCompile Include="src\GameEngine\Renderer\Buffer.cpp">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\OrthoGraphicCamera.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\RenderCommand.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\GameEngine\Renderer\Renderer.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\RendrerAPI.cpp">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\GameEngine\Renderer\Shader.cpp">
@@ -1431,9 +1452,5 @@
     <ClCompile Include="src\hzpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameEngine\Renderer\RendrerAPI.cpp" />
-    <ClCompile Include="src\GameEngine\Renderer\RenderCommand.cpp" />
-    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.cpp" />
-    <ClCompile Include="src\GameEngine\Renderer\OrthoGraphicCamera.cpp" />
   </ItemGroup>
 </Project>

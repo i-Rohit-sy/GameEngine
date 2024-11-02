@@ -1,7 +1,7 @@
 #pragma once
 #include"GameEngine/core.h"
 #include"GameEngine/Events/Event.h"
-
+#include "GameEngine/Core/Timestep.h"
 
 namespace GameEngine {
 	class GAMEENGINE_API Layer
@@ -15,7 +15,8 @@ namespace GameEngine {
 		virtual void OnDetach() {}
 		virtual void OnUpdate() {}
 		virtual void OnImGuiRender() {}
-		virtual void OnEvent(Event& event) {}
+		virtual void OnEvent(Event& event) {} 
+		virtual void OnUpdate(Timestep ts) {}
 
 		inline const std::string& GetName() const { return m_DebugName; }
 
