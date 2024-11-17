@@ -8,6 +8,7 @@ namespace GameEngine {
 	class Renderer
 	{
 	public:
+		static void Init();
 		static void BeginScene(OrthogpaphicCamera& camera);
 		static void EndScene();
 		
