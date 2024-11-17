@@ -7,6 +7,9 @@
     <Filter Include="src\GameEngine">
       <UniqueIdentifier>{8CEC7F4E-78BA-7354-614E-E47A4DBB4FB9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\GameEngine\Core">
+      <UniqueIdentifier>{64C85E01-D029-3C0F-5997-82C1C5F772CE}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\GameEngine\Events">
       <UniqueIdentifier>{F08254D9-5CEF-0FD4-25E3-A731910E323C}</UniqueIdentifier>
     </Filter>
@@ -46,6 +49,9 @@
     <Filter Include="vendor\glm\glm\gtx">
       <UniqueIdentifier>{B3A6A76B-9F8A-68C1-08EB-6214F4ED5243}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vendor\stb_image">
+      <UniqueIdentifier>{0DA0BA59-F998-D9AB-22CB-BE300E23B9B7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GameEngine.h">
@@ -53,6 +59,9 @@
     </ClInclude>
     <ClInclude Include="src\GameEngine\Application.h">
       <Filter>src\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Core\Timestep.h">
+      <Filter>src\GameEngine\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\EntryPoint.h">
       <Filter>src\GameEngine</Filter>
@@ -99,6 +108,12 @@
     <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.h">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLShader.h">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLTexture.h">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLVertexArray.h">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClInclude>
@@ -127,6 +142,9 @@
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\Shader.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\Texture.h">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\VertexArray.h">
@@ -1389,7 +1407,9 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameEngine\Core\Timestep.h" />
+    <ClInclude Include="vendor\stb_image\stb_image.h">
+      <Filter>vendor\stb_image</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameEngine\Application.cpp">
@@ -1419,6 +1439,12 @@
     <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.cpp">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLTexture.cpp">
+      <Filter>src\GameEngine\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\GameEngine\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1446,11 +1472,17 @@
     <ClCompile Include="src\GameEngine\Renderer\Shader.cpp">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\Texture.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\GameEngine\Renderer\VertexArray.cpp">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\hzpch.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\stb_image\stb_image.cpp">
+      <Filter>vendor\stb_image</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

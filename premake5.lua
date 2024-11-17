@@ -16,6 +16,7 @@ workspace "GameEngine"
     IncludeDir["Glad"]="GameEngine/vendor/Glad/include"
     IncludeDir["ImGui"]="GameEngine/vendor/imgui"
     IncludeDir["glm"]="GameEngine/vendor/glm"
+    IncludeDir["stb_image"] = "GameEngine/vendor/stb_image"
 
 
 group "Dependencies"
@@ -42,6 +43,8 @@ project "GameEngine"
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp",
+        "%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
         "%{prj.name}/vendor/glm/glm/**.hpp",
         "%{prj.name}/vendor/glm/glm/**.inl"
 
@@ -53,7 +56,9 @@ project "GameEngine"
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
-        "%{IncludeDir.glm}"
+        "%{IncludeDir.glm}",
+        "%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 
     }
 

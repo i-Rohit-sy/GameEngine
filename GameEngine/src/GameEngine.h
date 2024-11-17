@@ -15,6 +15,7 @@
 
 //__________________Renderer_________________
 #include "GameEngine/Renderer/Renderer.h"
+#include "GameEngine/Renderer/Texture.h"
 #include "GameEngine/Renderer/RenderCommand.h"
 #include "GameEngine/Renderer/Buffer.h"
 #include "GameEngine/Renderer/VertexArray.h"
