@@ -9,6 +9,8 @@
 #include<utility>
 #include<algorithm>
 #include<functional>
+#include<array>
+
 
 
 #include<string>
@@ -17,8 +19,9 @@
 #include<unordered_map>
 #include<unordered_set>
 
-#include "GameEngine/Log.h"
+#include "GameEngine/core/Log.h"
 
+#include "GameEngine/Debug/Instrumentor.h"
 
 #ifdef GE_PLATFORM_WINDOWS
 	#include <Windows.h>

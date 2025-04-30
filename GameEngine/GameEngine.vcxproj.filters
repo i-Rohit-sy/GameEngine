@@ -10,23 +10,26 @@
     <Filter Include="src\GameEngine\Core">
       <UniqueIdentifier>{64C85E01-D029-3C0F-5997-82C1C5F772CE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\GameEngine\Debug">
+      <UniqueIdentifier>{0230442D-EEBE-CDF6-97DD-E1F1834BDE9C}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\GameEngine\Events">
       <UniqueIdentifier>{F08254D9-5CEF-0FD4-25E3-A731910E323C}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\GameEngine\ImGui">
       <UniqueIdentifier>{B69AA22D-A229-2CF7-4B48-40F237B63C9D}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\GameEngine\Platform">
-      <UniqueIdentifier>{60069F9C-CC3D-E733-D547-4B5741FE0D2D}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\GameEngine\Platform\OpenGL">
-      <UniqueIdentifier>{94C3C859-80E9-92C0-692F-188C55F4B78C}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\GameEngine\Platform\Windows">
-      <UniqueIdentifier>{9A10FDEA-06F4-0B2B-0FF7-39677B59D27B}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\GameEngine\Renderer">
       <UniqueIdentifier>{B20D7C77-1E45-C40E-274F-28329305EB07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform">
+      <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\OpenGL">
+      <UniqueIdentifier>{35A49437-A105-7245-2A73-B8F796D3A804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\Windows">
+      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
@@ -57,14 +60,41 @@
     <ClInclude Include="src\GameEngine.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameEngine\Application.h">
-      <Filter>src\GameEngine</Filter>
+    <ClInclude Include="src\GameEngine\Core\Application.h">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Core\Base.h">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Core\EntryPoint.h">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Core\Input.h">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Core\KeyCodes.h">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Core\Layer.h">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Core\LayerStack.h">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Core\Log.h">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Core\MouseCodes.h">
+      <Filter>src\GameEngine\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Core\Timestep.h">
       <Filter>src\GameEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameEngine\EntryPoint.h">
-      <Filter>src\GameEngine</Filter>
+    <ClInclude Include="src\GameEngine\Core\Window.h">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Debug\Instrumentor.h">
+      <Filter>src\GameEngine\Debug</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Events\ApplicationEvent.h">
       <Filter>src\GameEngine\Events</Filter>
@@ -81,49 +111,10 @@
     <ClInclude Include="src\GameEngine\ImGui\ImGuiLayer.h">
       <Filter>src\GameEngine\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameEngine\Input.h">
-      <Filter>src\GameEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\KeyCodes.h">
-      <Filter>src\GameEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Layer.h">
-      <Filter>src\GameEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\LayerStack.h">
-      <Filter>src\GameEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Log.h">
-      <Filter>src\GameEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\MouseButtonCodes.h">
-      <Filter>src\GameEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLBuffer.h">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLContext.h">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.h">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLShader.h">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLTexture.h">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Platform\OpenGL\OpenGLVertexArray.h">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Platform\Windows\WindowsInput.h">
-      <Filter>src\GameEngine\Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameEngine\Platform\Windows\WindowsWindow.h">
-      <Filter>src\GameEngine\Platform\Windows</Filter>
-    </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\Buffer.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\Framebuffer.h">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\GraphicsContext.h">
@@ -132,10 +123,16 @@
     <ClInclude Include="src\GameEngine\Renderer\OrthoGraphicCamera.h">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\OrthographicCameraController.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\RenderCommand.h">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\Renderer.h">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine\Renderer\Renderer2D.h">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\GameEngine\Renderer\RendererAPI.h">
@@ -150,11 +147,32 @@
     <ClInclude Include="src\GameEngine\Renderer\VertexArray.h">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameEngine\Window.h">
-      <Filter>src\GameEngine</Filter>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
+      <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameEngine\core.h">
-      <Filter>src\GameEngine</Filter>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>src\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\hzpch.h">
       <Filter>src</Filter>
@@ -1305,6 +1323,12 @@
     <ClInclude Include="vendor\glm\glm\gtx\string_cast.inl">
       <Filter>vendor\glm\glm\gtx</Filter>
     </ClInclude>
+    <ClInclude Include="vendor\glm\glm\gtx\structured_bindings.hpp">
+      <Filter>vendor\glm\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glm\glm\gtx\structured_bindings.inl">
+      <Filter>vendor\glm\glm\gtx</Filter>
+    </ClInclude>
     <ClInclude Include="vendor\glm\glm\gtx\texture.hpp">
       <Filter>vendor\glm\glm\gtx</Filter>
     </ClInclude>
@@ -1412,8 +1436,23 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GameEngine\Application.cpp">
-      <Filter>src\GameEngine</Filter>
+    <ClCompile Include="src\GameEngine\Core\Application.cpp">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Core\Input.cpp">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Core\Layer.cpp">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Core\LayerStack.cpp">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Core\Log.cpp">
+      <Filter>src\GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Core\Window.cpp">
+      <Filter>src\GameEngine\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\GameEngine\ImGui\ImGuiBuild.cpp">
       <Filter>src\GameEngine\ImGui</Filter>
@@ -1421,49 +1460,28 @@
     <ClCompile Include="src\GameEngine\ImGui\ImGuiLayer.cpp">
       <Filter>src\GameEngine\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameEngine\Layer.cpp">
-      <Filter>src\GameEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\LayerStack.cpp">
-      <Filter>src\GameEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\Log.cpp">
-      <Filter>src\GameEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLBuffer.cpp">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLContext.cpp">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLRendererAPI.cpp">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLShader.cpp">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLTexture.cpp">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\Platform\OpenGL\OpenGLVertexArray.cpp">
-      <Filter>src\GameEngine\Platform\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\Platform\Windows\WindowsInput.cpp">
-      <Filter>src\GameEngine\Platform\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GameEngine\Platform\Windows\WindowsWindow.cpp">
-      <Filter>src\GameEngine\Platform\Windows</Filter>
-    </ClCompile>
     <ClCompile Include="src\GameEngine\Renderer\Buffer.cpp">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\Framebuffer.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\GraphicsContext.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\GameEngine\Renderer\OrthoGraphicCamera.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\OrthographicCameraController.cpp">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\GameEngine\Renderer\RenderCommand.cpp">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\GameEngine\Renderer\Renderer.cpp">
+      <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine\Renderer\Renderer2D.cpp">
       <Filter>src\GameEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\GameEngine\Renderer\RendrerAPI.cpp">
@@ -1477,6 +1495,33 @@
     </ClCompile>
     <ClCompile Include="src\GameEngine\Renderer\VertexArray.cpp">
       <Filter>src\GameEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>src\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hzpch.cpp">
       <Filter>src</Filter>

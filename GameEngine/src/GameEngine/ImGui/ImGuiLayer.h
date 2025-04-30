@@ -1,5 +1,5 @@
 #pragma once
-#include "GameEngine/Layer.h"
+#include "GameEngine/core/Layer.h"
 
 #include "GameEngine/Events/ApplicationEvent.h"
 
@@ -7,7 +7,7 @@
 #include "GameEngine/Events/MouseEvent.h"
 
 namespace GameEngine {
-	class GAMEENGINE_API ImGuiLayer : public Layer
+	class ImGuiLayer : public Layer
 	{
 	public:
 	public:
@@ -16,7 +16,8 @@ namespace GameEngine {
 
 		virtual void OnAttach() override;
 		virtual void OnDetach() override;
-		virtual void OnImGuiRender() override;
+
+		virtual void OnEvent(Event& e) override;
 
 		void Begin();
 		void End();
