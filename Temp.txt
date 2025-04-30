@@ -1,1 +1,18 @@
-﻿
+﻿ref texture to rendered 2D completed
+
+
+
+Added Timer
+Instrumentation Renderer.cpp
+OPENGLBUFFER.CPP
+Merge Branch OIO
+keyCodes jklwdj
+Renderer2D API improvement
+Add texture to batch renderer
+Unredindent inline renderer.h
+Renderer2D can now
+added draw call splitting
+FrameBuffer
+
+Renamed Hazel
+a platform  for analytics that show about vidoes

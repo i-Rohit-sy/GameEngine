@@ -1,34 +1,39 @@
 #pragma once
 
-#include "RendererAPI.h"
+#include "GameEngine/Renderer/RendererAPI.h"
+
 
 namespace GameEngine {
 
 	class RenderCommand
 	{
 	public:
-		inline static void Init()
+		static void Init()
 		{
 			s_RendererAPI->Init();
 		}
+		static void SetViewport(uint32_t x, uint32_t y, uint32_t width, uint32_t height)
+		{
+			s_RendererAPI->SetViewport(x, y, width, height);
+		}
 
-		inline static void SetClearColor(const glm::vec4& color)
+		static void SetClearColor(const glm::vec4& color)
 		{
 			s_RendererAPI->setClearColor(color);
 		}
-		inline static void Clear()
+		static void Clear()
 		{
 			s_RendererAPI->Clear();
 		}
 
 
-		inline static void DrawIndexed(const std::shared_ptr<VertexArray>& vertexArray)
+		static void DrawIndexed(const Ref<VertexArray>& vertexArray, uint32_t count = 0)
 		{
-			s_RendererAPI->DrawIndexed(vertexArray);
+			s_RendererAPI->DrawIndexed(vertexArray, count);
 		}
 
 	private:
-		static RendererAPI* s_RendererAPI;
+		static Scope<RendererAPI> s_RendererAPI;
 	};
 
 }
